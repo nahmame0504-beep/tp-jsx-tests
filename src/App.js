@@ -1,23 +1,34 @@
-import logo from './logo.svg';
-import './App.css';
+import JSXDemo from './JSXDemo';
+import ButtonWithLogging from './ButtonWithLogging';
+import DataLoader from './DataLoader';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div style={{ padding: '20px', fontFamily: 'sans-serif' }}>
+      <h1>TP JSX et Composition</h1>
+
+      <section>
+        <h2>Démo JSX</h2>
+        <JSXDemo />
+      </section>
+
+      <section>
+        <h2>Higher-Order Component (HOC)</h2>
+        <ButtonWithLogging label="Cliquer ici" />
+      </section>
+
+      <section>
+        <h2>Render Props</h2>
+        <DataLoader
+          render={(data) => (
+            <ul>
+              {data.map((name) => (
+                <li key={name}>{name}</li>
+              ))}
+            </ul>
+          )}
+        />
+      </section>
     </div>
   );
 }
