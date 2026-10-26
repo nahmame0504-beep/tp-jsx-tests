@@ -1,70 +1,49 @@
-# Getting Started with Create React App
+# TP 7 : Comprendre JSX, la Composition Avancée et les Tests React
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Ce projet a été réalisé dans le cadre de l'apprentissage de React. Il traite de la compréhension interne de JSX, des motifs de composition avancés (*Higher-Order Components* et *Render Props*), ainsi que de l'écriture de tests unitaires et d'intégration avec Jest et React Testing Library.
 
-## Available Scripts
+##  Fonctionnalités réalisées
 
-In the project directory, you can run:
+1. **Compréhension et règles de JSX** (`JSXDemo.js`)
+   - Comparaison entre la syntaxe JSX et la méthode générée par Babel (`React.createElement`).
+   - Application des bonnes pratiques JSX (utilisation de `className` et `htmlFor`).
 
-### `npm start`
+2. **Higher-Order Component (HOC)** (`withLogging.js`, `Button.js`, `ButtonWithLogging.js`)
+   - Création d'un composant d'ordre supérieur pour intercepter et afficher les *props* dans la console avant le rendu.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+3. **Composition avec Render Props** (`DataLoader.js`)
+   - Transmission d'une fonction de rendu (*render prop*) pour dynamiser l'affichage d'une liste de données (`Alice`, `Bob`, `Charlie`).
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+4. **Tests Unitaires et d'Intégration** (`Greeting.test.js`, `Counter.test.js`, `App.test.js`)
+   - Test unitaire d'affichage avec `@testing-library/react`.
+   - Test d'intégration simulant des événements utilisateur (`fireEvent.click`) sur un composant compteur.
 
-### `npm test`
+---
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+##  Technologies utilisées
 
-### `npm run build`
+- **React** (Bootstrapped avec [Create React App](https://github.com/facebook/create-react-app))
+- **Jest** & **React Testing Library**
+- **JavaScript (ES6+)**
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+---
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+##  Structure du projet
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+```text
+src/
+├── App.js                   # Composant principal assemblant le TP
+├── App.test.js              # Test du composant principal
+├── JSXDemo.js               # Démonstration JSX vs React.createElement
+├── withLogging.js           # HOC pour le logging des props
+├── Button.js                # Composant Bouton de base
+├── ButtonWithLogging.js     # Bouton enrichi par le HOC
+├── DataLoader.js            # Composant utilisant le pattern Render Props
+├── Greeting.js              # Composant simple pour test unitaire
+├── Greeting.test.js         # Test unitaire de Greeting
+├── Counter.js               # Composant Compteur avec état
+└── Counter.test.js          # Test d'intégration interactif du Compteur
+```
 
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+<img width="500" height="255" alt="image" src="https://github.com/user-attachments/assets/9ef34f4a-7b6e-4a66-b3ba-40c90fe887b6" />
+<img width="921" height="500" alt="Capture d&#39;écran 2026-10-26 181358" src="https://github.com/user-attachments/assets/3aeccba2-24e5-417f-94d1-1921ec2b9d71" />
