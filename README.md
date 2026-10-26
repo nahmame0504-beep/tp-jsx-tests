@@ -45,5 +45,6 @@ src/
 └── Counter.test.js          # Test d'intégration interactif du Compteur
 ```
 
-<img width="500" height="255" alt="image" src="https://github.com/user-attachments/assets/9ef34f4a-7b6e-4a66-b3ba-40c90fe887b6" />
+<img width="1916" height="971" alt="image" src="https://github.com/user-attachments/assets/602b46e5-dd54-46e4-a403-4cd9ce615f33" />
+
 <img width="921" height="500" alt="Capture d&#39;écran 2026-10-26 181358" src="https://github.com/user-attachments/assets/3aeccba2-24e5-417f-94d1-1921ec2b9d71" />
